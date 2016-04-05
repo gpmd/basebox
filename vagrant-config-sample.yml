@@ -1,0 +1,7 @@
+project_name: 'Basebox'
+domain_name: 'basebox'
+synced_directory: './'
+box_type: 'ubuntu/trusty64'
+box_memory: '4096'
+box_cpus: '2'
+ip_address: '192.168.33.10'

@@ -19,6 +19,8 @@ box_cpus: '2'
 ip_address: '192.168.33.10'
 ```
 
+**Note:** I sync one level up from the `site` directory as I tend to include a `data` or `shared` directory there that contains config files, media assets etc.
+
 ### 2. Create the VM
 
 Run `vagrant up`.

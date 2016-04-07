@@ -37,10 +37,10 @@ Run `vagrant ssh`.
 
 The `Vagrantfile` provisions the VM, and `bootstrap.sh` installs all the 'things' - modify to your hearts content.
 
-Project root in VM: `/var/www/<host_name>/`
-Web root in VM: `/var/www/<host_name>/site/public_html/`
-Database Username: `root`
-Database Password: (none)
-Database Name: `<host_name>`
-URL of Instance: `http://<ip_address>/<host_name>/`
-Host File Configuration: `<ip_address> www.<host_name>.dev <host_name>.dev`
++ Project root in VM: `/var/www/<host_name>/`
++ Web root in VM: `/var/www/<host_name>/site/public_html/`
++ Database Username: `root`
++ Database Password: (none)
++ Database Name: `<host_name>`
++ URL of Instance: `http://<ip_address>/<host_name>/`
++ Host File Configuration: `<ip_address> www.<host_name>.dev <host_name>.dev`

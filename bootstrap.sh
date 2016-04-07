@@ -10,7 +10,7 @@ apt-get -y install apache2
 
 # Creating folder
 echo "--- Setting Folder Permissions"
-chmod 0777 -R /var/www/site
+chmod 0777 -R /var/www/$1
 
 # enable modrewrite
 echo "--- Enabling Apache mod_rewrite"
@@ -21,11 +21,11 @@ echo "--- Creating Apache config file"
 echo "
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/site/public_html
+    DocumentRoot /var/www/$1/site/public_html
     ServerName $1.dev
     ServerAlias www.$1.dev
 
-    <Directory '/var/www/site/public_html'>
+    <Directory '/var/www/$1/site/public_html'>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny
@@ -95,9 +95,9 @@ mv composer.phar /usr/local/bin/composer
 
 # Set Ownership and Permissions
 echo "--- Setting ownership and permissions"
-chown -R www-data /var/www/site/
-find /var/www/site/ -type d -exec chmod 700 {} \;
-find /var/www/site/ -type f -exec chmod 600 {} \;
+chown -R www-data /var/www/$1/
+find /var/www/$1/ -type d -exec chmod 700 {} \;
+find /var/www/$1/ -type f -exec chmod 600 {} \;
 
 # Restart apache
 echo "--- Restarting Apache"

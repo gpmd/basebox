@@ -1,6 +1,7 @@
 project_name: 'Basebox'
-domain_name: 'basebox'
+host_name: 'basebox'
 synced_directory: './'
+provider: 'virtualbox'
 box_type: 'ubuntu/trusty64'
 box_memory: '4096'
 box_cpus: '2'

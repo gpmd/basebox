@@ -44,3 +44,7 @@ The `Vagrantfile` provisions the VM, and `bootstrap.sh` installs all the 'things
 + Database Name: `<host_name>`
 + URL of Instance: `http://<ip_address>/<host_name>/`
 + Host File Configuration: `<ip_address> www.<host_name>.dev <host_name>.dev`
+
+---
+
+Loosely based on and inspired by (Vagrant for Magento 2)[https://github.com/ryanstreet/magento2-vagrant] by Ryan Street.

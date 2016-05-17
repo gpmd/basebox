@@ -48,4 +48,4 @@ The `Vagrantfile` provisions the VM, and `bootstrap.sh` installs all the 'things
 
 ---
 
-Based on and inspired by (Vagrant for Magento 2)[https://github.com/ryanstreet/magento2-vagrant] by Ryan Street.
+Based on and inspired by [Vagrant for Magento 2](https://github.com/ryanstreet/magento2-vagrant) by Ryan Street.

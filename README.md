@@ -20,6 +20,8 @@ box_cpus: '2'
 ip_address: '192.168.33.10'
 ```
 
+Where you put and what you name your webroot is up to you, but you'll need to create that as well.
+
 ### 2. Create the VM
 
 Run `vagrant up`.

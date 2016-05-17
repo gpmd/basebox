@@ -11,8 +11,8 @@ Create a `vagrant-config.yml`. A sample file is provided containing the followin
 ```yaml
 project_name: 'Basebox'
 host_name: 'basebox'
-synced_directory: '../'
-web_root: 'site/public_html/'
+synced_directory: './'
+web_root: 'public_html/'
 vm_provider: 'virtualbox'
 box_type: 'ubuntu/trusty64'
 box_memory: '4096'
@@ -20,15 +20,13 @@ box_cpus: '2'
 ip_address: '192.168.33.10'
 ```
 
-**Note:** I normally sync one level up from the main site/app directory as I tend to include a `data` or `shared` directory there that contains config files, media assets etc.
-
 ### 2. Create the VM
 
 Run `vagrant up`.
 
 ### 3. Create a vhost on your host machine
 
-Add a vhost record on your host machine pointing to the directory you defined as your webroot, domain name (`<host_name>.dev`) and `<ip_address>` you specified in the config file
+Add a vhost record on your host machine pointing to the `<web_root>`, domain name (`<host_name>.dev`) and `<ip_address>` you specified in the config file.
 
 ### 4. Log into VM
 

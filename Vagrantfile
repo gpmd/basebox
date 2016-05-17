@@ -10,6 +10,7 @@ CONF = YAML.load_file('vagrant-config.yml')
 projectName = CONF['project_name']
 hostName = CONF['host_name']
 syncedDirectory = CONF['synced_directory']
+webRoot = CONF['web_root']
 vmProvider = CONF['vm_provider']
 boxType = CONF['box_type']
 boxMemory = CONF['box_memory']
@@ -39,6 +40,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ## Bootstrap script to provision box
     config.vm.provision "shell" do |s|
         s.path = "bootstrap.sh"
-        s.args   = [hostName]
+        s.args   = [hostName,webRoot]
     end
 end

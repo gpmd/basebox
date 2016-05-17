@@ -21,11 +21,11 @@ echo "--- Creating Apache config file"
 echo "
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/$1/site/public_html
+    DocumentRoot /var/www/$1/$2
     ServerName $1.dev
     ServerAlias www.$1.dev
 
-    <Directory '/var/www/$1/site/public_html'>
+    <Directory '/var/www/$1/$2'>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny
@@ -92,6 +92,28 @@ apt-get -y install git
 echo "--- Installing Composer"
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+
+# Other dependencies and build tools
+
+# Curl
+sudo apt-get update
+sudo apt-get install curl
+
+# Bzip2
+sudo apt-get install bzip2
+
+# Node/NPM
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Grunt
+sudo npm install -g grunt-cli
+
+# Gulp
+sudo npm install -g gulp-cli
+
+# Bower
+sudo npm install -g bower
 
 # Set Ownership and Permissions
 echo "--- Setting ownership and permissions"

@@ -12,7 +12,7 @@ Create a `vagrant-config.yml`. A sample file is provided containing the followin
 project_name: 'Basebox'
 host_name: 'basebox'
 synced_directory: './'
-web_root: 'public_html/'
+web_root: 'public_html/' // Must exist
 vm_provider: 'virtualbox'
 box_type: 'ubuntu/trusty64'
 box_memory: '4096'
@@ -20,7 +20,7 @@ box_cpus: '2'
 ip_address: '192.168.33.10'
 ```
 
-Where you put and what you name your webroot is up to you, but you'll need to create that as well.
+**Note** You must create a webroot directory before you `vagrant up`.
 
 ### 2. Create the VM
 

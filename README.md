@@ -1,6 +1,6 @@
 # Vagrant Basebox
 
-> A simple Vagrant box, because most are not...
+> A simple Vagrant box, because most, are not...
 
 ## Instructions
 

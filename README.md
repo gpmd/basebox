@@ -12,7 +12,7 @@ Create a `vagrant-config.yml`. A sample file is provided containing the followin
 project_name: 'Basebox'
 host_name: 'basebox'
 synced_directory: './'
-web_root: 'public_html/' // Must exist
+web_root: 'public_html/'
 vm_provider: 'virtualbox'
 box_type: 'ubuntu/trusty64'
 box_memory: '4096'

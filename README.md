@@ -20,7 +20,7 @@ box_cpus: '2'
 ip_address: '192.168.33.10'
 ```
 
-**Note** You must create a webroot directory before you `vagrant up`.
+**IMPORTANT:** You must create a webroot directory before you `vagrant up`.
 
 ### 2. Create the VM
 

@@ -118,8 +118,8 @@ sudo npm install -g bower
 # Set Ownership and Permissions
 echo "--- Setting ownership and permissions"
 chown -R www-data /var/www/$1/
-find /var/www/$1/ -type d -exec chmod 700 {} \;
-find /var/www/$1/ -type f -exec chmod 600 {} \;
+find /var/www/$1/ -type d -exec chmod 775 {} \;
+find /var/www/$1/ -type f -exec chmod 664 {} \;
 
 # Restart apache
 echo "--- Restarting Apache"

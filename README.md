@@ -1,6 +1,6 @@
 # Vagrant Basebox
 
-> A simple Vagrant box, because most, are not...
+> A simple shell script bootstrapped Vagrant box
 
 ## Instructions
 

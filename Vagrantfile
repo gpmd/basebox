@@ -29,6 +29,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.name = projectName
         vb.memory = boxMemory
         vb.cpus = boxCpus
+        vb.customize [
+            "storagectl", :id,
+            "--name", "SATAController",
+            "--hostiocache", "on"
+        ]
     end
 
     ## IP to access box

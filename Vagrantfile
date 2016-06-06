@@ -43,7 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Default mount options
     #config.vm.synced_folder "#{syncedDirectory}", "/var/www/#{hostName}/", :mount_options => ["dmode=777", "fmode=777"]
     # NFS mount options for better performance
-    config.vm.synced_folder "#{syncedDirectory}", "/var/www/#{hostName}/", type: "nfs", :mount_options => ['rw', 'vers=3', 'udp', 'fsc']
+    config.vm.synced_folder "#{syncedDirectory}", "/var/www/#{hostName}/", type: "nfs", :mount_options => ['rw', 'vers=3', 'udp', 'fsc', 'actimeo=1']
 
     ## Bootstrap script to provision box
     config.vm.provision "shell" do |s|

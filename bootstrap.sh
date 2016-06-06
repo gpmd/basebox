@@ -87,6 +87,8 @@ echo "xdebug.remote_connect_back = 1" >> /etc/php5/apache2/php.ini
 # Install Git
 echo "--- Installing Git"
 apt-get -y install git
+# Increase Git performance over NFS
+git config --global core.preloadindex true
 
 # Composer Installation
 echo "--- Installing Composer"
@@ -94,6 +96,10 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 # Other dependencies and build tools
+
+# Cache NFS file access
+sudo apt-get install cachefilesd
+echo -e "RUN=yes" | sudo tee -a /etc/default/cachefilesd
 
 # Curl
 sudo apt-get update

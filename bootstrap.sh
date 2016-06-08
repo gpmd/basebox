@@ -71,6 +71,15 @@ service apache2 restart
 echo "--- Setting PHP Timezone"
 echo "date.timezone = Europe/London" >> /etc/php5/cli/php.ini
 
+# Bzip2
+echo "--- Installing bzip2"
+apt-get install bzip2
+
+# Cache NFS file access
+echo "--- Installing cachefilesd"
+apt-get install cachefilesd
+echo -e "RUN=yes" | tee -a /etc/default/cachefilesd
+
 # Set Pecl php_ini location
 echo "--- Configuring PECL"
 pear config-set php_ini /etc/php5/apache2/php.ini
@@ -95,37 +104,27 @@ echo "--- Installing Composer"
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-# Other dependencies and build tools
-
-# Cache NFS file access
-sudo apt-get install cachefilesd
-echo -e "RUN=yes" | sudo tee -a /etc/default/cachefilesd
-
-# Curl
-sudo apt-get update
-sudo apt-get install curl
-
-# Bzip2
-sudo apt-get install bzip2
+# Front end tools
+echo "--- Installing front end tools"
 
 # Node/NPM
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_4.x | bash -
+apt-get install -y nodejs
 
 # Grunt
-sudo npm install -g grunt-cli
+npm install -g grunt-cli
 
 # Gulp
-sudo npm install -g gulp-cli
+npm install -g gulp-cli
 
 # Bower
-sudo npm install -g bower
+npm install -g bower
 
 # Set Ownership and Permissions
-echo "--- Setting ownership and permissions"
-chown -R vagrant:www-data /var/www/$1/
-find /var/www/$1/ -type d -exec chmod 775 {} \;
-find /var/www/$1/ -type f -exec chmod 664 {} \;
+# echo "--- Setting ownership and permissions"
+# chown -R vagrant:www-data /var/www/$1/
+# find /var/www/$1/ -type d -exec chmod 775 {} \;
+# find /var/www/$1/ -type f -exec chmod 664 {} \;
 
 # Restart apache
 echo "--- Restarting Apache"

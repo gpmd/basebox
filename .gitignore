@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
+*.sublime-*
 .vagrant/
 vagrant-config.yml
 public_html/

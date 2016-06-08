@@ -81,17 +81,17 @@ apt-get install cachefilesd
 echo -e "RUN=yes" | tee -a /etc/default/cachefilesd
 
 # Set Pecl php_ini location
-echo "--- Configuring PECL"
-pear config-set php_ini /etc/php5/apache2/php.ini
+#echo "--- Configuring PECL"
+#pear config-set php_ini /etc/php5/apache2/php.ini
 
 # Install Xdebug
-echo "--- Installing Xdebug"
-pecl install xdebug
+#echo "--- Installing Xdebug"
+#pecl install xdebug
 
 # Install Pecl Config variables
-echo "--- Configuring Xdebug"
-echo "xdebug.remote_enable = 1" >> /etc/php5/apache2/php.ini
-echo "xdebug.remote_connect_back = 1" >> /etc/php5/apache2/php.ini
+#echo "--- Configuring Xdebug"
+#echo "xdebug.remote_enable = 1" >> /etc/php5/apache2/php.ini
+#echo "xdebug.remote_connect_back = 1" >> /etc/php5/apache2/php.ini
 
 # Install Git
 echo "--- Installing Git"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Add PHP 5.6 package
-echo "--- Adding PHP 5.6 package repo"
+# Add PHP package repo - contains 5.5, 5.6, and 7
+echo "--- Adding PHP package repo"
 add-apt-repository ppa:ondrej/php
 
 # update
@@ -54,22 +54,17 @@ apt-get -q -y install mysql-server-5.6 mysql-client-5.6
 echo "--- Creating Database"
 mysql -u root -e "create database $1;"
 
-# Install PHP 5.6
+# Install PHP 7
 echo "--- Installing PHP"
-apt-get -y install php5
+apt-get -y install php
 
-# Install Required PHP extensions
+# Install PHP extensions
 echo "--- Installing PHP Extensions"
-apt-get -y install php5-mhash php5-mcrypt php5-curl php5-cli php5-mysql php5-gd php5-intl php5-common php-pear php5-dev php5-xsl
-
-# Mcrypt issue
-echo "--- PHP mcrypt Patch"
-php5enmod mcrypt
-service apache2 restart
+apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd php-intl php-common php-pear php-dev php7.0-xsl php-mbstring php-zip php-json
 
 # Set PHP Timezone
 echo "--- Setting PHP Timezone"
-echo "date.timezone = Europe/London" >> /etc/php5/cli/php.ini
+echo "date.timezone = Europe/London" >> /etc/php/7.0/cli/php.ini
 
 # Cache NFS file access
 echo "--- Installing cachefilesd"

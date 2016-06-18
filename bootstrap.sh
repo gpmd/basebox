@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Add PHP 5.6 package
+echo "--- Adding PHP 5.6 package repo"
+add-apt-repository ppa:ondrej/php
+
 # update
 echo "--- Updating APT"
 apt-get update

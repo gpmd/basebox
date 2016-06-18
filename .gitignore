@@ -2,6 +2,6 @@
 .idea/
 *.sublime-*
 .vagrant/
-vagrant-config.yml
+vagrant-config.yaml
 public_html/
 site/

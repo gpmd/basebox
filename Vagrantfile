@@ -4,7 +4,7 @@
 require 'yaml'
 
 # Load config file
-CONF = YAML.load_file('vagrant-config.yml')
+CONF = YAML.load_file('vagrant-config.yaml')
 
 # Config variables
 projectName = CONF['project_name']

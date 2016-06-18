@@ -8,10 +8,6 @@ apt-get update
 echo "--- Installing Apache"
 apt-get -y install apache2
 
-# Creating folder
-echo "--- Setting Folder Permissions"
-chmod 0777 -R /var/www/$1
-
 # enable modrewrite
 echo "--- Enabling Apache mod_rewrite"
 a2enmod rewrite 
@@ -71,27 +67,10 @@ service apache2 restart
 echo "--- Setting PHP Timezone"
 echo "date.timezone = Europe/London" >> /etc/php5/cli/php.ini
 
-# Bzip2
-echo "--- Installing bzip2"
-apt-get install bzip2
-
 # Cache NFS file access
 echo "--- Installing cachefilesd"
 apt-get install cachefilesd
 echo -e "RUN=yes" | tee -a /etc/default/cachefilesd
-
-# Set Pecl php_ini location
-#echo "--- Configuring PECL"
-#pear config-set php_ini /etc/php5/apache2/php.ini
-
-# Install Xdebug
-#echo "--- Installing Xdebug"
-#pecl install xdebug
-
-# Install Pecl Config variables
-#echo "--- Configuring Xdebug"
-#echo "xdebug.remote_enable = 1" >> /etc/php5/apache2/php.ini
-#echo "xdebug.remote_connect_back = 1" >> /etc/php5/apache2/php.ini
 
 # Install Git
 echo "--- Installing Git"
@@ -114,17 +93,8 @@ apt-get install -y nodejs
 # Grunt
 npm install -g grunt-cli
 
-# Gulp
-npm install -g gulp-cli
-
 # Bower
 npm install -g bower
-
-# Set Ownership and Permissions
-# echo "--- Setting ownership and permissions"
-# chown -R vagrant:www-data /var/www/$1/
-# find /var/www/$1/ -type d -exec chmod 775 {} \;
-# find /var/www/$1/ -type f -exec chmod 664 {} \;
 
 # Restart apache
 echo "--- Restarting Apache"

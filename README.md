@@ -2,6 +2,8 @@
 
 > A simple shell script bootstrapped Vagrant box
 
+If you want to know what it installs have a look in [bootstrap.sh](https://github.com/gpmd/basebox/blob/master/bootstrap.sh).
+
 ## Instructions
 
 ### 1. Config

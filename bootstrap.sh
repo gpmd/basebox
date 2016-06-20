@@ -52,7 +52,7 @@ apt-get -q -y install mysql-server-5.6 mysql-client-5.6
 
 # Create Database instance
 echo "--- Creating Database"
-mysql -u root -e "create database $1;"
+mysql -u root -e "create database $3;"
 
 # Install PHP 7
 echo "--- Installing PHP"

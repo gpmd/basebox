@@ -13,6 +13,7 @@ Create a `vagrant-config.yml`. A sample file is provided containing the followin
 ```yaml
 project_name: 'Basebox'
 host_name: 'basebox'
+db_name: 'basebox'
 synced_directory: './'
 web_root: 'public_html/'
 vm_provider: 'virtualbox'
@@ -21,6 +22,8 @@ box_memory: '4096'
 box_cpus: '2'
 ip_address: '192.168.33.10'
 ```
+
+To see how each of these options is mapped, have a look at the **Other Info** section below.
 
 **IMPORTANT:** You must create a webroot directory before you `vagrant up`.
 
@@ -44,7 +47,7 @@ The `Vagrantfile` provisions the VM, and `bootstrap.sh` installs all the 'things
 + Web root in VM: `/var/www/<host_name>/<web_root>`
 + Database Username: `root`
 + Database Password: (none)
-+ Database Name: `<host_name>`
++ Database Name: `<db_name>`
 + URL of Instance: `http://<ip_address>/<host_name>/`
 + Host File Configuration: `<ip_address> www.<host_name>.dev <host_name>.dev`
 

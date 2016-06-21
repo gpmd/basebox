@@ -49,6 +49,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ## Bootstrap script to provision box
     config.vm.provision "shell" do |s|
         s.path = "bootstrap.sh"
-        s.args   = [hostName,webRoot,dbName]
+        s.args = [hostName,webRoot,dbName]
     end
 end

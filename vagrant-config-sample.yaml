@@ -1,5 +1,6 @@
 project_name: 'Basebox'
 host_name: 'basebox'
+db_name: 'basebox'
 synced_directory: './'
 web_root: 'public_html/'
 vm_provider: 'virtualbox'

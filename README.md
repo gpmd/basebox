@@ -2,7 +2,7 @@
 
 > A simple shell script bootstrapped Vagrant box
 
-If you want to know what it installs have a look in [bootstrap.sh](https://github.com/gpmd/basebox/blob/master/bootstrap.sh).
+Two sample bootstrap files are included. The primary difference between the two is that one installs PHP 5.6 and the other PHP 7. If you want to know what else they install have a look in [bootstrap-sample-php56.sh](https://github.com/gpmd/basebox/blob/master/bootstrap-sample-php56.sh) and [bootstrap-sample-php7.sh](https://github.com/gpmd/basebox/blob/master/bootstrap-sample-php7.sh).
 
 ## Instructions
 
@@ -27,15 +27,19 @@ To see how each of these options is mapped, have a look at the **Other Info** se
 
 **IMPORTANT:** You must create a webroot directory before you `vagrant up`.
 
-### 2. Create the VM
+### 2. Choose/create a bootstrap.sh file
+
+Use one of the supplied example files and rename it to `bootstrap.sh`, or create your own - it's just a shell script.
+
+### 3. Create the VM
 
 Run `vagrant up`.
 
-### 3. Create a vhost on your host machine
+### 4. Create a vhost on your host machine
 
 Add a vhost record on your host machine pointing to the `<web_root>`, domain name (`<host_name>.dev`) and `<ip_address>` you specified in the config file.
 
-### 4. Log into VM
+### 5. Log into VM
 
 Run `vagrant ssh`.
 

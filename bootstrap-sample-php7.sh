@@ -23,7 +23,6 @@ echo "
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/$1/$2
     ServerName $1.dev
-    ServerAlias www.$1.dev
 
     <Directory '/var/www/$1/$2'>
         Options Indexes FollowSymLinks MultiViews

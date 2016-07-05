@@ -37,8 +37,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ]
     end
 
-    ## IP to access box
+    # IP to access box
     config.vm.network "private_network", ip: ipAddress
+
+    # Set up ssh forwarding
+    config.ssh.forward_agent = true
 
     # Synced directory
     # Default mount options

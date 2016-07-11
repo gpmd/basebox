@@ -6,3 +6,4 @@ bootstrap.sh
 vagrant-config.yaml
 public_html/
 site/
+project/

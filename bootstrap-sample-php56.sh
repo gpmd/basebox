@@ -4,6 +4,9 @@
 echo "--- Adding PHP package repo"
 add-apt-repository ppa:ondrej/php
 
+# Add Git core package repo so we can get the latest version
+apt-add-repository ppa:git-core/ppa
+
 # update
 echo "--- Updating APT"
 apt-get update
@@ -14,7 +17,7 @@ apt-get -y install apache2
 
 # enable modrewrite
 echo "--- Enabling Apache mod_rewrite"
-a2enmod rewrite 
+a2enmod rewrite
 
 # append AllowOverride to Apache Config File
 echo "--- Creating Apache config file"

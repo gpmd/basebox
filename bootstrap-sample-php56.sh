@@ -62,7 +62,7 @@ apt-get -y install php5
 
 # Install Required PHP extensions
 echo "--- Installing PHP Extensions"
-apt-get -y install php5-mhash php5-mcrypt php5-curl php5-cli php5-mysql php5-gd php5-intl php5-common php-pear php5-dev php5-xsl
+apt-get -y install php5-mhash php5-mcrypt php5-curl php5-cli php5-mysql php5-gd php5-intl php5-common php-pear php5-dev php5-xsl php5-bcmath
 
 # Mcrypt issue
 echo "--- PHP mcrypt Patch"

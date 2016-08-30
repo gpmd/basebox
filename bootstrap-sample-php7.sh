@@ -36,7 +36,7 @@ echo "
 </VirtualHost>
 " > /etc/apache2/sites-available/$1.conf
 
-echo "ServerName localhost" >> /etc/apache2/apache2.conf 
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Enabling Site
 echo "--- Enabling Site"
@@ -62,7 +62,7 @@ apt-get -y install php
 
 # Install PHP extensions
 echo "--- Installing PHP Extensions"
-apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd php-intl php-common php-pear php-dev php7.0-xsl php-mbstring php-zip php-json php-bcmath
+apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd php-imagick php-intl php-common php-pear php-dev php7.0-xsl php-mbstring php-zip php-json php-bcmath
 
 # Set PHP Timezone
 echo "--- Setting PHP Timezone"

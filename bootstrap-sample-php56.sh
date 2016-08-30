@@ -36,7 +36,7 @@ echo "
 </VirtualHost>
 " > /etc/apache2/sites-available/$1.conf
 
-echo "ServerName localhost" >> /etc/apache2/apache2.conf 
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Enabling Site
 echo "--- Enabling Site"
@@ -58,11 +58,11 @@ mysql -u root -e "create database $3;"
 
 # Install PHP 5.6
 echo "--- Installing PHP"
-apt-get -y install php5
+apt-get -y install php5.6
 
 # Install Required PHP extensions
 echo "--- Installing PHP Extensions"
-apt-get -y install php5-mhash php5-mcrypt php5-curl php5-cli php5-mysql php5-gd php5-intl php5-common php-pear php5-dev php5-xsl php5-bcmath
+apt-get -y install php5-mhash php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-zip php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-common php-pear php5.6-dev php5.6-xsl php5.6-bcmath
 
 # Mcrypt issue
 echo "--- PHP mcrypt Patch"

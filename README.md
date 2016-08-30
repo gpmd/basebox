@@ -8,7 +8,7 @@ Two sample bootstrap files are included. The primary difference between the two 
 
 ### 1. Config
 
-Create a `vagrant-config.yml`. A sample file is provided containing the following defaults:
+Create a `vagrant-config.yaml`. A sample file is provided containing the following defaults:
 
 ```yaml
 project_name: 'Basebox'

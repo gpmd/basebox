@@ -62,7 +62,7 @@ apt-get -y install php
 
 # Install PHP extensions
 echo "--- Installing PHP Extensions"
-apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd php-imagick php-intl php-common php-pear php-dev php7.0-xsl php-mbstring php-zip php-json php-bcmath
+apt-get -y install php5-mhash php-mcrypt php-curl php-cli php-mysql php-gd php-imagick php-intl php-common php-pear php-dev php7.0-xsl php-mbstring php-zip php-json php-bcmath php7.0-zip
 
 # Set PHP Timezone
 echo "--- Setting PHP Timezone"

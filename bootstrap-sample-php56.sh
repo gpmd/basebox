@@ -62,7 +62,7 @@ apt-get -y install php5.6
 
 # Install Required PHP extensions
 echo "--- Installing PHP Extensions"
-apt-get -y install php5-mhash php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-zip php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-common php-pear php5.6-dev php5.6-xsl php5.6-bcmath
+apt-get -y install php5-mhash php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-zip php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-common php-pear php5.6-dev php5.6-xsl php5.6-bcmath php5.6-zip
 
 # Mcrypt issue
 echo "--- PHP mcrypt Patch"
